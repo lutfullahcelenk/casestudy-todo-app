@@ -1,8 +1,13 @@
 import React from "react";
 import ToDoItem from "../ToDoItem";
-import { ToDoListContainer } from "./styles";
+import { ToDoListButton, ToDoListContainer } from "./styles";
+import { MdDeleteForever as DeleteIcon } from "react-icons/md";
 
-const ToDoList = ({ tasks, deleteTask, editTask, completeTask }) => {
+const ToDoList = ({ tasks, deleteTask, completeTask }) => {
+  const deleteSelectedTasks = () => {
+   
+  };
+
   return (
     <>
       <ToDoListContainer>
@@ -11,10 +16,13 @@ const ToDoList = ({ tasks, deleteTask, editTask, completeTask }) => {
             key={index}
             task={task}
             deleteTask={deleteTask}
-            editTask={editTask}
             completeTask={completeTask}
           />
         ))}
+
+        <ToDoListButton onClick={deleteSelectedTasks}>
+          Delete Tasks <DeleteIcon />
+        </ToDoListButton>
       </ToDoListContainer>
     </>
   );
