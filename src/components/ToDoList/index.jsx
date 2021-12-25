@@ -3,9 +3,11 @@ import ToDoItem from "../ToDoItem";
 import { ToDoListButton, ToDoListContainer } from "./styles";
 import { MdDeleteForever as DeleteIcon } from "react-icons/md";
 
-const ToDoList = ({ tasks, deleteTask, completeTask }) => {
+const ToDoList = ({ tasks, setTasks, deleteTask, completeTask }) => {
+
   const deleteSelectedTasks = () => {
-   
+      const selected = tasks.filter((task) => !task.isDone)
+      setTasks(selected);
   };
 
   return (
@@ -21,8 +23,9 @@ const ToDoList = ({ tasks, deleteTask, completeTask }) => {
         ))}
 
         <ToDoListButton onClick={deleteSelectedTasks}>
-          Delete Tasks <DeleteIcon />
+          Delete Selected Tasks <DeleteIcon />
         </ToDoListButton>
+
       </ToDoListContainer>
     </>
   );

@@ -20,7 +20,7 @@ const useToDoLogic = () => {
     const completeTask = (id) => {
       let completed = tasks.map(task => {
         if (task.id === id) {
-          task.isComplete = !task.isComplete;
+          task.isDone = !task.isDone;
         }
         return task;
       });
@@ -28,6 +28,7 @@ const useToDoLogic = () => {
     };
     return {
         tasks,
+        setTasks,
         addTask,
         deleteTask,
         completeTask

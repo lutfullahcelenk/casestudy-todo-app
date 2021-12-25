@@ -12,7 +12,7 @@ const ToDoItem = ({ task, deleteTask, editTask, completeTask }) => {
     <>
       <ToDoItemContainer
         className={
-          task.isComplete ? "todo-uncompleted completed" : "todo-uncompleted"
+          task.isDone ? "todo-uncompleted completed" : "todo-uncompleted"
         }
       >
         <ToDoItemText key={task.id}>{task.text}</ToDoItemText>
