@@ -13,3 +13,22 @@ body {
     height: 100vh;
     background: #161a2b;
   }
+
+  .todo-uncompleted {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px auto;
+    color: #fff;
+    background-color: #06459c;
+  
+    padding: 16px;
+    border-radius: 5px;
+    width: 90%;
+  }
+
+  .completed {
+    text-decoration: line-through red double;
+    opacity: 0.6;
+  }
+  

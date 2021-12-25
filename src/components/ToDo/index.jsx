@@ -23,7 +23,15 @@ const ToDo = () => {
   const editTask = () => {};
 
   //COMPLETE TASK
-  const completeTask = () => {};
+  const completeTask = (id) => {
+    let completed = tasks.map(task => {
+      if (task.id === id) {
+        task.isComplete = !task.isComplete;
+      }
+      return task;
+    });
+    setTasks(completed);
+  };
 
   return (
     <>

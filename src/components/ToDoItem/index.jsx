@@ -11,11 +11,13 @@ import { TiTick as TickIcon } from "react-icons/ti";
 const ToDoItem = ({ task, deleteTask, editTask, completeTask }) => {
   return (
     <>
-      <ToDoItemContainer>
+      <ToDoItemContainer
+        className={task.isComplete ? "todo-uncompleted completed" : "todo-uncompleted"}
+      >
         <ToDoItemText key={task.id}>{task.text}</ToDoItemText>
 
         <ToDoItemButtonContainer>
-          <TickIcon />
+          <TickIcon onClick={() => completeTask(task.id)} />
           <DeleteIcon onClick={() => deleteTask(task.id)} />
           <EditIcon />
         </ToDoItemButtonContainer>
