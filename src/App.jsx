@@ -1,11 +1,13 @@
 import React from "react";
+import Home from "./pages/Home";
 import "./App.css";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">Hello Lüto</header>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
