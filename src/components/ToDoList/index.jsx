@@ -1,11 +1,17 @@
-import React from 'react';
+import React from "react";
+import ToDoItem from "../ToDoItem";
+import { ToDoListContainer } from "./styles";
 
-const ToDoList = () => {
-    return (
-        <>
-            <h1>todolist</h1>
-        </>
-    )
-}
+const ToDoList = ({ tasks }) => {
+  return (
+    <>
+      <ToDoListContainer>
+        {tasks.map((task, index) => (
+          <ToDoItem key={index} task={task} />
+        ))}
+      </ToDoListContainer>
+    </>
+  );
+};
 
 export default ToDoList;
