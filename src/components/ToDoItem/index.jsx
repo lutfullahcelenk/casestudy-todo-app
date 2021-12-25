@@ -8,7 +8,7 @@ import { MdDeleteForever as DeleteIcon } from "react-icons/md";
 import { AiFillEdit as EditIcon } from "react-icons/ai";
 import { TiTick as TickIcon } from "react-icons/ti";
 
-const ToDoItem = ({ task }) => {
+const ToDoItem = ({ task, deleteTask, editTask, completeTask }) => {
   return (
     <>
       <ToDoItemContainer>
@@ -16,7 +16,7 @@ const ToDoItem = ({ task }) => {
 
         <ToDoItemButtonContainer>
           <TickIcon />
-          <DeleteIcon />
+          <DeleteIcon onClick={() => deleteTask(task.id)} />
           <EditIcon />
         </ToDoItemButtonContainer>
       </ToDoItemContainer>
