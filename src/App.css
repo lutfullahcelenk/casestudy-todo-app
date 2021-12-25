@@ -11,6 +11,11 @@ body {
     background: #161a2b;
   }
 
+  a{
+    color: white;
+  }
+
+
   .todo-uncompleted {
     display: flex;
     justify-content: space-between;
