@@ -5,7 +5,6 @@ export const TodoContainer = styled.div`
   border-radius: 5px;
   color: white;
   padding: 1rem;
-  min-width: 500px;
 `;
 
 export const TodoTitle = styled.h1`
